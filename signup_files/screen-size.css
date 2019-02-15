@@ -1,0 +1,42 @@
+/* 
+    Document   : screen-size.css
+    Created on : Jan 15, 2015, 12:39:17 PM
+    Author     : kai
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body:after {
+    content: 'global';
+    display: none;
+    width:100%;
+}
+
+@media screen and (min-width: 980px) {
+    body:after {
+        content: 'desktop';
+        display:none;
+        width:100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+    body:after {
+        content: 'tablet';
+        display:none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body:after {
+        content: 'phonelandscape';
+        display:none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body:after {
+        content: 'phoneportrait';
+        display:none;
+    }
+}
